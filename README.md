@@ -103,7 +103,7 @@ def rotation_visualizer(rot_matrix):
     plt.show()
 ```
 ### Randomly generated point cloud with empty specific circle inside
-```
+```python
 def is_inside_circle(point, center, radius):
     """Check if a point is inside a given circle."""
     return np.sum((point - center)**2) < radius**2
