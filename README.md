@@ -1,6 +1,6 @@
 # Code Bible: my collection of Valuable Snippets
 
-##### Randomly generated Rotation matrix
+### Randomly generated Rotation matrix
 ```python
 # Generate a random 3x3 rotation matrix for rotation around the X-axis
 def random_rotation_x(angle):
@@ -36,7 +36,7 @@ def random_rotation_matrix():
     random_matrix = np.dot(rotation_z, np.dot(rotation_y, rotation_x))
     return random_matrix
 ```
-### Visualization of rotation matrix
+##### Visualization of rotation matrix
 ```python
 def rotation_visualizer(rot_matrix):
     """
@@ -102,7 +102,7 @@ def rotation_visualizer(rot_matrix):
     # Show the plot
     plt.show()
 ```
-##### Randomly generated point cloud with empty specific circle inside
+### Randomly generated point cloud with empty specific circle inside
 ```
 def is_inside_circle(point, center, radius):
     """Check if a point is inside a given circle."""
