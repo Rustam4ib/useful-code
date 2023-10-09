@@ -102,3 +102,27 @@ def rotation_visualizer(rot_matrix):
     # Show the plot
     plt.show()
 ```
+##### Randomly generated point cloud with empty specific circle inside
+```
+def is_inside_circle(point, center, radius):
+    """Check if a point is inside a given circle."""
+    return np.sum((point - center)**2) < radius**2
+
+def generate_points_with_empty_circle(num_points, img_size, circle_center, circle_radius):
+    """Generate random points, excluding those inside a specified circle."""
+    points = np.random.rand(num_points, 2) * img_size
+    return np.array([p for p in points if not is_inside_circle(p, circle_center, circle_radius)])
+
+num_points = 5000
+img_size = 120
+circle_center = np.array([60, 60])
+circle_radius = 30
+
+
+
+# Generate point cloud
+points = generate_points_with_empty_circle(num_points, img_size, circle_center, circle_radius)
+# Visualization
+plt.scatter(points[:, 0], points[:, 1], color='blue')
+plt.show()
+```
