@@ -126,3 +126,28 @@ points = generate_points_with_empty_circle(num_points, img_size, circle_center, 
 plt.scatter(points[:, 0], points[:, 1], color='blue')
 plt.show()
 ```
+
+### Find IP adress of raspberry pi 4
+If you're running MacOS or Linux, try this one:
+
+```console
+arp -na | grep -i b8:27:eb
+```
+
+On windows, you can use:
+
+```console
+arp -a | findstr b8-27-eb
+```
+
+Assigned MAC range	
+
+28:CD:C1:xx:xx:xx	
+
+B8:27:EB:xx:xx:xx	
+
+D8:3A:DD:xx:xx:xx	
+
+DC:A6:32:xx:xx:xx	
+
+E4:5F:01:xx:xx:xx	
